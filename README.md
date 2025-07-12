@@ -1,37 +1,44 @@
-## Programação em C
+# Programação em C
 
-> Autor: Dennis Ritchie (1972)
+> Autor do C: Dennis Ritchie (1972)
 
-C is a general-purpose language.
+C is a general-purpose language
 
 <br>
 
-### Rodando no Terminal
+## Rodando no Terminal
 
 Para rodar um código escrito em C pelo terminal, precisaremos:
 
-> 1. Escrever o código (uso o Neovim)
-> 2. Entrar no terminal (uso o Kitty), e compilar o arquivo (uso o gcc)
+1. Escrever o código (uso o Neovim)
+2. Entrar no terminal (uso o Kitty), e compilar o arquivo (uso o gcc)
 ```bash
 gcc [nome-arquivo].c -o [saída]
 # exemplo: gcc main.c -o main
 ```
-> 3. Após compilar, executar o output
+3. Após compilar, executar o output
 ```bash
 ./main
+# executando o arquivo 'main'
 ```
 
 <br>
 
-### Sintaxe da Linguagem - Básico
+## Sintaxe da Linguagem - Básico
 
 Na linguagem C existem diferentes tipos de variáveis, das quais temos:
 
 > int (2-4 bytes): números inteiros positivos e negativos
+> 
 > float (4 bytes): números com ponto flutuante - 6 a 7 - positivos e negativos
+> 
 > double (8 bytes): igual ao float, mas possui mais casas decimais - 15 casas
+> 
 > char (1 byte): caracteres individuais
+> 
 > bool (1 byte): resultado booleano (true or false)
+
+<br>
 
 Ainda dentro do C, nós temos o prefixo <i>short</i>, como <i>short int</i> para variáveis menores.\
 Para fazer a desclaração de uma variável, precisaremos de seu tipo, nome e valor:
@@ -43,7 +50,7 @@ char string[] = "Hay!";    // define uma variável string de texto
 
 <br>
 
-*Format Specifiers*
+### Format Specifiers
 
 Os especificadores são caracteres especiais que indicam como os dados devem ser formatados ao serem exibidos com funções como <i>printf</i> e <i>scanf</i>. Eles indicam para o compilador qual tipo de dado a variável está armazenando.
 
@@ -57,18 +64,26 @@ printf("O número é: %d \nA letra é: %c", number, letter);    // retorna o nú
 ```
 
 > %d: inteiro da base decimal, com sinal
+> 
 > %u: inteiro sem sinal
+> 
 > %f: ponto flutuante (float)
+> 
 > %lf: ponto flutuante (double)
+> 
 > %.4f: ponto flutuante, com precisão de 4 casas
+> 
 > %c: caractere
+> 
 > %s: string
+> 
 > %p: endereço de memória de um ponteiro
+> 
 > %e: notação científica
 
 <br>
 
-*Type Conversion*
+### Type Conversion
 
 A conversão de valores de um <i>data type</i> para outro pode ser feita de forma implícita ou explícita.\
 No caso da linguagem C, não é tão interessante trabalharmos com a conversão implícita, para evitar problemas como este exemplo:
@@ -89,7 +104,7 @@ printf("%.1f", quotient);    // output será: 2.5
 
 <br>
 
-*Constants*
+### Constants
 
 Podemos ainda declarar constantes em C, utilizando da inicial <i>const</i>, como abaixo:
 ```c
@@ -100,7 +115,7 @@ Obs.: importante ressaltar que é considerado uma boa prática usar constantes e
 
 <br>
 
-*Operators*
+### Operators
 
 Os operadores em C são semelhantes a outras linguagens de programação (poderíamos dizer que se trata do caminho inverso, na realidade). Dos gerais, teremos:
 
@@ -112,6 +127,7 @@ Os operadores em C são semelhantes a outras linguagens de programação (poder�
 >
 > Comparativos (retorna um bool*): == (igual, dois '='), != (diferente, um '!' e '='), > (maior que), < (menor que), >= (maior ou igual), <= (menor ou igual)
 
+<br>
 
 *como exemplo de comparativo, temos:
 ```c
@@ -128,7 +144,8 @@ Obs.: importante ressaltar que o C não tem especificador para booleano, então 
 
 <br>
 
-### Condicionais (if statements)
+## Condicionais (if statements)
 
 <!-- See https://www.w3schools.com/c/c_conditions.php -->
 
+Ainda por vir...
