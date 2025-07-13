@@ -40,7 +40,7 @@ Na linguagem C existem diferentes tipos de variáveis, das quais temos:
 
 <br>
 
-Ainda dentro do C, nós temos o prefixo <i>short</i>, como <i>short int</i> para variáveis menores.\
+Ainda dentro do C, nós temos o prefixo *short*, como *short int* para variáveis menores.\
 Para fazer a desclaração de uma variável, precisaremos de seu tipo, nome e valor:
 
 ```c
@@ -52,7 +52,7 @@ char string[] = "Hay!";    // define uma variável string de texto
 
 ### Format Specifiers
 
-Os especificadores são caracteres especiais que indicam como os dados devem ser formatados ao serem exibidos com funções como <i>printf</i> e <i>scanf</i>. Eles indicam para o compilador qual tipo de dado a variável está armazenando.
+Os especificadores são caracteres especiais que indicam como os dados devem ser formatados ao serem exibidos com funções como *printf* e *scanf*. Eles indicam para o compilador qual tipo de dado a variável está armazenando.
 
 ```c
 int number = 10;
@@ -85,7 +85,7 @@ printf("O número é: %d \nA letra é: %c", number, letter);    // retorna o nú
 
 ### Type Conversion
 
-A conversão de valores de um <i>data type</i> para outro pode ser feita de forma implícita ou explícita.\
+A conversão de valores de um *data type* para outro pode ser feita de forma implícita ou explícita.\
 No caso da linguagem C, não é tão interessante trabalharmos com a conversão implícita, para evitar problemas como este exemplo:
 
 ```c
@@ -93,7 +93,7 @@ float division = 5 / 2;
 printf("%f", division);    // o output será: 2.000000
 ```
 
-Para evitarmos essas situações, devemos realizar a conversão explícita. Nesse caso, o <i>casting</i> é feito da seguinte forma:
+Para evitarmos essas situações, devemos realizar a conversão explícita. Nesse caso, o *casting* é feito da seguinte forma:
 
 ```c
 int dividend = 5;
@@ -106,7 +106,7 @@ printf("%.1f", quotient);    // output será: 2.5
 
 ### Constants
 
-Podemos ainda declarar constantes em C, utilizando da inicial <i>const</i>, como abaixo:
+Podemos ainda declarar constantes em C, utilizando da inicial *const*, como abaixo:
 ```c
 const int MINUTES_PER_HOUR = 60;
 ```
@@ -125,11 +125,11 @@ Os operadores em C são semelhantes a outras linguagens de programação (poder�
 >
 > Lógicos: && (e), || (ou), ! (não)
 >
-> Comparativos (retorna um bool*): == (igual, dois '='), != (diferente, um '!' e '='), > (maior que), < (menor que), >= (maior ou igual), <= (menor ou igual)
+> Comparativos (retorna um bool¹): == (igual, dois '='), != (diferente, um '!' e '='), > (maior que), < (menor que), >= (maior ou igual), <= (menor ou igual)
 
 <br>
 
-*como exemplo de comparativo, temos:
+¹como exemplo de comparativo, temos:
 ```c
 <stdbool.h>
 
@@ -140,12 +140,89 @@ bool result = x > y;
 printf("%d", result);    // retorna 1 (true)
 ```
 
-Obs.: importante ressaltar que o C não tem especificador para booleano, então retornará <i>true</i> como 1 e <i>false</i> como 0.
+Obs.: importante ressaltar que o C não tem especificador para booleano, então retornará *true* como 1 e *false* como 0.
 
 <br>
 
-## Condicionais (if statements)
+## Condicionais 
 
-<!-- See https://www.w3schools.com/c/c_conditions.php -->
+Dentro da linguagem C, nós temos os chamados *condicionais*, que se referem a formas de executar blocos de códigos a partir de determinadas condições que são atendidas via comparações. 
+Um exemplo seria dizer para o computador: 
+> "mostre isso na tela se o usuário colocar um valor menor ou igual a x"
 
-Ainda por vir...
+<br>
+
+### If...Else Statements
+
+Uma das formas como fazemos isso é utilizando declaradores como *if* ou *else*. Caso a condição seja verdadeira¹, o sistema retorna aquilo que etiver dentro do if, senão retorna o conteúdo do else.
+
+> ¹ lembrando que em C não temos *true* ou *false* por padrão, então estaremos retornando 1 (verdadeiro) ou 0 (falso).
+
+```c
+int age = 17;
+if (age < 18) {
+    printf("Você ainda não é de maior");
+}
+else {
+    printf("Parabéns, você já é de maior");
+}
+```
+
+Outra forma de escrevermos condicionais de forma simplificada é utilizando de um *operador ternário*. O operador ternário utiliza da seguinte sintaxe:
+
+> (condicional) ? função_se_verdadeiro : função_se_falso;
+
+Utilizando desta lógica para o mesmo trecho de código, teremos:
+
+```c
+int age = 17;
+(age < 18) ? printf("Você ainda não é de maior") : printf("Parabéns, você já é de maior");
+```
+
+<br>
+
+### Switch Case
+
+Outra forma de fazermos nossa condicional é através do *switch*, que pode ser utilizado quando tivermos valores pré-definidos para os inputs da função. Sua sintaxe é bem simples:
+
+```c
+switch (expressão) {
+    caso 1:
+        // bloco de código
+        break;
+    caso 2:
+        // bloco de código
+        break;
+    default:
+        // bloco de código caso os demais não forem atendidos
+}
+```
+
+Uma outra utilidade para o switch é com os *loops*. Um loop de um programa ocorrerá enquanto a condição inicial não for satisfeita (ou seja, enquanto a condicional retornar **true**). Um exemplo seria:
+
+```c
+/* Contador de 0 a 5 */
+int i = 0;
+
+while (i < 5) {
+    printf("%d\n", i);
+    i++;    // soma 1 ao valor atual de i
+}
+
+/* Contagem Regressiva */
+int countdown = 5;
+
+while (coutdown > 0) {
+    printf("%d\n", countdown);
+    countdown--;
+}
+printf("Feliz ano novo!\n");
+```
+
+<br>
+
+## For Loop
+
+<!-- See https://www.w3schools.com/c/c_for_loop.php -->
+
+Continuidade...
