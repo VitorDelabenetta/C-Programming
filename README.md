@@ -1,4 +1,14 @@
 # Programação em C
+![Arch](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff&style=for-the-badge)
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
+![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000?style=for-the-badge&logo=markdown)
+
+![W3Schools](https://img.shields.io/badge/W3Schools-04AA6D?style=for-the-badge&logo=W3Schools&logoColor=white)
+![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
+
+<br>
 
 > Autor do C: Dennis Ritchie (1972)
 
@@ -144,7 +154,7 @@ Obs.: importante ressaltar que o C não tem especificador para booleano, então 
 
 <br>
 
-## Condicionais 
+### Condicionais
 
 Dentro da linguagem C, nós temos os chamados *condicionais*, que se referem a formas de executar blocos de códigos a partir de determinadas condições que são atendidas via comparações. 
 Um exemplo seria dizer para o computador: 
@@ -152,7 +162,7 @@ Um exemplo seria dizer para o computador:
 
 <br>
 
-### If...Else Statements
+#### If...Else Statements
 
 Uma das formas como fazemos isso é utilizando declaradores como *if* ou *else*. Caso a condição seja verdadeira¹, o sistema retorna aquilo que etiver dentro do if, senão retorna o conteúdo do else.
 
@@ -181,7 +191,7 @@ int age = 17;
 
 <br>
 
-### Switch Case
+#### Switch Case
 
 Outra forma de fazermos nossa condicional é através do *switch*, que pode ser utilizado quando tivermos valores pré-definidos para os inputs da função. Sua sintaxe é bem simples:
 
@@ -221,7 +231,7 @@ printf("Feliz ano novo!\n");
 
 <br>
 
-## For Loop
+### For Loop
 
 <!-- See https://www.w3schools.com/c/c_for_loop.php -->
 
